@@ -3,7 +3,12 @@ The library for the implementation of artificial neural network into delphi.
 
 See the [wiki](https://github.com/Lukas0025/NeuralNetworkPasLib/wiki) for documentation.
 
-## implementation:
+## implementation in RAD Sudio
+```
+Project > Add to Project.
+Find and select neuralNetwork and click Open. (neuralNetwork is neuralNetwork.pas from Github -> You must download it)
+```
+## implementation in code
 ```pascal
 uses NeuralNetwork;
 ```
