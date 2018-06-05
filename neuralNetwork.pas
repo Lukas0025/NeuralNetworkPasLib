@@ -113,7 +113,7 @@ begin
   end;
 
   i := outputToTarget(a);
-  OutputDebugString(PChar('Idetifikována situace ' + IntToStr(i) + ' s pravděpodobností ' + FloatToStr(a[i])));
+  OutputDebugString(PChar('the situation is identified ' + IntToStr(i) + ' with probability ' + FloatToStr(a[i])));
 
   think := a;
 end;
