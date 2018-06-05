@@ -1,7 +1,7 @@
 # NeuralNetworkPasLib
 The library for the implementation of artificial neural network into delphi.
 
-See the [wiki](wiki) for documentation.
+See the [wiki](https://github.com/Lukas0025/NeuralNetworkPasLib/wiki) for documentation.
 
 ## implementation:
 ```pascal
@@ -94,4 +94,4 @@ end.
 numOfinputs = 2; // number of inputs (+1)
 numOfoutupts = 0; // number of outputs (+1)
 ```
-[documentation](wiki)
+[documentation](https://github.com/Lukas0025/NeuralNetworkPasLib/wiki)
