@@ -108,7 +108,7 @@ begin
     
 
   for i := 0 to numOfoutupts do begin
-    for j := 0 to numOfinputs do a[i] := a[i] + synapticWeights[i][j] * input[j] ;
+    for j := 0 to numOfinputs do a[i] := a[i] + synapticWeights[i][j] * input[j];
     a[i] := sigmoid(a[i]);
   end;
 
