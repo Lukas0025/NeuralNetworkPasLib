@@ -3,8 +3,8 @@ unit neuralNetwork;
 interface
 
 Const
-  numOfinputs = 255; // number of inputs (+1)
-  numOfoutupts = 3; // number of outputs (+1)
+  numOfinputs = 2; // number of inputs (+1)
+  numOfoutupts = 0; // number of outputs (+1)
 
 type
   inputArray = array [0 .. numOfinputs] of integer;
@@ -29,7 +29,7 @@ end;
 
 implementation
 
-uses SysUtils, Windows, Math;
+uses SysUtils, Windows, Math, Unit1;
 
 constructor neauralNetwork.Create;
 begin
@@ -108,7 +108,7 @@ begin
     
 
   for i := 0 to numOfoutupts do begin
-    for j := 0 to numOfinputs do a[i] := a[i] + synapticWeights[i][j] * (input[j] / 5000) ;
+    for j := 0 to numOfinputs do a[i] := a[i] + synapticWeights[i][j] * input[j] ;
     a[i] := sigmoid(a[i]);
   end;
 
