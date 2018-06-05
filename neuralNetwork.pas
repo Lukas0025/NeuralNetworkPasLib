@@ -3,8 +3,8 @@ unit neuralNetwork;
 interface
 
 Const
-  numOfinputs = 255; // number of inputs
-  numOfoutupts = 3; // number of outputs
+  numOfinputs = 255; // number of inputs (+1)
+  numOfoutupts = 3; // number of outputs (+1)
 
 type
   inputArray = array [0 .. numOfinputs] of integer;
