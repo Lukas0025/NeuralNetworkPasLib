@@ -5,7 +5,7 @@ The library for the implementation of artificial neural network into delphi.
 ```
 uses NeuralNetwork;
 ```
-## Sample cose
+## Example code  
 
 ```
 unit Unit1;
