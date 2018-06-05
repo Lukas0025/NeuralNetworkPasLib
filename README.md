@@ -33,11 +33,15 @@ var i: integer;
 begin
   neauralNetwork.Create;
   
+  //Try learn 101 as true (Set array)
+  
   LearnArray[0] := 1;
   LearnArray[1] := 0;
   LearnArray[2] := 1;
   
   LearnTargetArray[0] := 1;
+  
+  //Try learn 101 as true (Learn from array)
   
   for i:=1 to 100
     neauralNetwork.Learn(LearnArray, LearnTargetArray);
