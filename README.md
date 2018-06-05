@@ -41,7 +41,7 @@ begin
   
   LearnTargetArray[0] := 1;
   
-  //Try learn 101 as true (Learn from array)
+  //Try learn 101 as true (Learn from array) - 100 times
   
   for i:=1 to 100
     neauralNetwork.Learn(LearnArray, LearnTargetArray);
