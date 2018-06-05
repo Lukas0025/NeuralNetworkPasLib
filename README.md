@@ -28,15 +28,35 @@ uses Dialogs, NeuralNetwork;
 
 procedure TForm1.FormCreate(Sender: TObject);
 var i: integer;
-    LearnArray: TArray<Integer>;
-    ThinkAboutArray: TArray<Integer>;
-    LearnTargetArray: TArray<Integer>;
+    LearnArray, ThinkArray: inputArray;
+    LearnTargetArray: outputArray;
 begin
   neauralNetwork.Create;
+  
+  LearnArray[0] := 1;
+  LearnArray[1] := 0;
+  LearnArray[2] := 1;
+  
+  LearnTargetArray[0] := 1;
+  
   for i:=1 to 100
-    neauralNetwork.Learn();
-  ShowMessage(IntToStr(neauralNetwork.think()));
+    neauralNetwork.Learn(LearnArray, LearnTargetArray);
+  
+  //Try new situation 111 after learn
+  
+  ThinkArray[0] := 1;
+  ThinkArray[1] := 1;
+  ThinkArray[2] := 1;
+  
+  ShowMessage(IntToStr(
+    neauralNetwork.outputToTarget(neauralNetwork.think(ThinkArray))
+  ));
 end;
 
 end.
+```
+and change constant
+```
+numOfinputs = 2; // number of inputs (+1)
+numOfoutupts = 0; // number of outputs (+1)
 ```
