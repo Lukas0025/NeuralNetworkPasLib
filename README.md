@@ -2,12 +2,12 @@
 The library for the implementation of artificial neural network into delphi.
 
 ## implementation:
-```
+```pascal
 uses NeuralNetwork;
 ```
 ## Example code  
 
-```
+```pascal
 unit Unit1;
 
 interface
@@ -60,7 +60,7 @@ end;
 end.
 ```
 and change constant
-```
+```pascal
 numOfinputs = 2; // number of inputs (+1)
 numOfoutupts = 0; // number of outputs (+1)
 ```
