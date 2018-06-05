@@ -28,10 +28,14 @@ uses Dialogs, NeuralNetwork;
 
 procedure TForm1.FormCreate(Sender: TObject);
 var i: integer;
+    LearnArray: TArray<Integer>;
+    ThinkAboutArray: TArray<Integer>;
+    LearnTargetArray: TArray<Integer>;
 begin
   neauralNetwork.Create;
   for i:=1 to 100
     neauralNetwork.Learn();
+  ShowMessage(IntToStr(neauralNetwork.think()));
 end;
 
 end.
