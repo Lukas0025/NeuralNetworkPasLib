@@ -36,6 +36,7 @@ begin
   RandomSynapticWeights;
 end;
 
+//converts index of the most benevolent to output array (index = 1, other = 0)
 class function neauralNetwork.targetToOutput(target: integer): outputArray;
 var i: integer;
     o: outputArray;
@@ -46,6 +47,7 @@ begin
      targetToOutput := o;
 end;
 
+//converts the output array to an index of the most benevolent
 class function neauralNetwork.outputToTarget(output: outputArray): integer;
 var i, max: integer;
 begin
@@ -65,25 +67,27 @@ begin
         synapticWeights[i][j] := Random(100) / 100;
 end;
 
-// Sigmoid, popisuje køivku tvaru S
-// Normalizuje mezi 0 a 1
+// Sigmoid, describes an S-shaped curve
+// Normalizes between 0 and 1
 class function neauralNetwork.sigmoid(x: double): double;
 begin
-  // exp() provádí e na x-tou
+  // exp () performs e on x
   sigmoid := 1 / (1 + exp(-x));
 end;
 
-// Derivace pro Sigmoidní køivku
+// Derivatives for the Sigmoid Curve
 class function neauralNetwork.derivative(x: double): double;
 begin
   derivative := x * (1 - x);
 end;
 
+// calculates the weight correction
 class function neauralNetwork.CalcCorectWeights(input: double; fail: double; thinkout: double): double;
 begin
   CalcCorectWeights := input * fail * derivative(thinkout);
 end;
 
+//learns what input array to be the output array
 class procedure neauralNetwork.learn(input: inputArray; target: outputArray);
 var thinkOutput: outputArray;
     fail: double;
@@ -99,6 +103,7 @@ begin
 
  end;
 
+//classifies by input array
 class function neauralNetwork.think(input: inputArray): outputArray;
 var
   i, j: integer;
