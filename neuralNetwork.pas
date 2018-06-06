@@ -7,7 +7,7 @@ Const
   numOfoutupts = 0; // number of outputs (+1)
 
 type
-  inputArray = array [0 .. numOfinputs] of integer;
+  inputArray = array [0 .. numOfinputs] of double;
   outputArray = array [0 .. numOfoutupts] of double;
   synapticArray = Array [0 .. numOfoutupts, 0 .. numOfinputs] of double;
 
