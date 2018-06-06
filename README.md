@@ -1,4 +1,7 @@
 # NeuralNetworkPasLib
+
+![AI](https://github.com/Lukas0025/NeuralNetworkPasLib/blob/master/logo.png)
+
 The library for the implementation of artificial neural network into delphi.
 
 See the [wiki](https://github.com/Lukas0025/NeuralNetworkPasLib/wiki) for documentation.
